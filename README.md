@@ -7,11 +7,14 @@ Misc charts for ad-hoc testing and examples
 Add an optional field "condition" to chart.yaml and requirements.yaml entries. The value of this field would be a YAML path in dot notation (e.g. glance.enabled). The YAML path is then looked up in the parent charts values and if found with a value of false (actual false, not just falsy) the relevant chart is not loaded.  
 
 ````
-	#parent/values.yaml
+	# parent/values.yaml
 
 	subchart1:
 	  enabled: false
 
+````
+
+````
 	# parent/requirements.yaml
 
 	dependencies:
