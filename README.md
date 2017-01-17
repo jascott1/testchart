@@ -4,7 +4,7 @@ Misc charts for ad-hoc testing and examples
 
 ## Conditional
 
-Add an optional field "condition" to chart.yaml and requirements.yaml entries. The value of this field would be a YAML path in dot notation (e.g. glance.enabled). The YAML path is then looked up in the parent charts values and if found with a value of false (actual false, not just falsy) the relevant chart is not loaded.  
+Add an optional field "condition" to chart.yaml and requirements.yaml entries. The value of this field would be a YAML path in dot notation (e.g. glance.enabled). The YAML path is then looked up in the parent charts values and if found with a value of false (actual false, not just falsy) the relevant chart is not loaded. If the path does not exist or is not explicitly false, the chart is loaded as normal. 
 
 ````
 	# parent/values.yaml
