@@ -26,6 +26,6 @@ Add an optional field "condition" to chart.yaml and requirements.yaml entries. T
 ````
 
 In the above example, the chart 'subchart1' would NOT be loaded since its condition value exists in the parent's values and returns false.
-
+See [condition-req](https://github.com/jascott1/testchart/tree/master/condition-req) folder for an example.
 
 
